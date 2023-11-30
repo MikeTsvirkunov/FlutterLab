@@ -89,6 +89,14 @@ var constantContainer = ConstantContainer(
       borderRadius: BorderRadius.all(Radius.circular(100)),
     ),
     // text styles
+    'tarifBlockHeaderTextStyle': const TextStyle(
+      color: Colors.black,
+      fontSize: 16
+    ),
+    'tarifBlockSubheaderTextStyle': const TextStyle(
+      color: Color(0xff717171),
+      fontSize: 14
+    ),
     'profileAvatarTextStyle': const TextStyle(
       color: Colors.black,
       fontWeight: FontWeight.bold,

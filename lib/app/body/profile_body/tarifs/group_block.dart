@@ -26,9 +26,18 @@ class _GroupBlockState extends State<GroupBlock> {
         widget.imagePass,
         width: StandartContainerExtractor.extract(constantContainer, 'titleTarifsMarkWidth'),
       ),
-      title: Text(widget.header),
-      subtitle: widget.subheader != null ? Text(widget.subheader!) : null,
-      trailing: const Icon(Icons.chevron_right_rounded),
+      title: Text(
+        widget.header,
+        style: StandartContainerExtractor.extract(constantContainer, 'tarifBlockHeaderTextStyle'),
+      ),
+      subtitle: widget.subheader != null ? Text(
+        widget.subheader!,
+        style: StandartContainerExtractor.extract(constantContainer, 'tarifBlockSubheaderTextStyle')
+      ) : null,
+      trailing: const Icon(
+        Icons.chevron_right_rounded,
+        color: Color(0xffaaaaaa),
+      ),
     ));
   }
 }
