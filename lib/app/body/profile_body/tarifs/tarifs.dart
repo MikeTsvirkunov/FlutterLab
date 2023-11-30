@@ -25,7 +25,7 @@ class _TarifsState extends State<Tarifs> {
         subheader: blocks[index]['subheader'],
         action: blocks[index]['action']
       ), 
-      separatorBuilder: (context, index) => Divider(), 
+      separatorBuilder: (context, index) => Divider(indent: StandartContainerExtractor.extract(constantContainer, 'titleTarifsIndentWidth'),), 
       itemCount: blocks.length
     );
   }

@@ -18,13 +18,19 @@ class _StdProfilePageBlockState extends State<StdProfilePageBlock> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          widget.title,
-          style: StandartContainerExtractor.extract(constantContainer, 'standartProfilePageBlockTitleStyle'),
+        Padding(
+          padding: StandartContainerExtractor.extract<EdgeInsetsGeometry>(constantContainer, 'standartProfilePageBlockTitlePadding'),
+          child: Text(
+            widget.title,
+            style: StandartContainerExtractor.extract(constantContainer, 'standartProfilePageBlockTitleStyle'),
+          )
         ),
-        Text(
-          widget.description,
-          style: StandartContainerExtractor.extract(constantContainer, 'standartProfilePageBlockDescriptionStyle'),
+        Padding(
+          padding: StandartContainerExtractor.extract<EdgeInsetsGeometry>(constantContainer, 'standartProfilePageBlockDescriptionPadding'),
+          child: Text(
+            widget.description,
+            style: StandartContainerExtractor.extract(constantContainer, 'standartProfilePageBlockDescriptionStyle'),
+          )
         ),
         widget.child
       ]

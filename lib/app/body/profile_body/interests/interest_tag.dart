@@ -13,6 +13,7 @@ class _StdInterestTagState extends State<StdInterestTag> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: StandartContainerExtractor.extract<EdgeInsetsGeometry>(constantContainer, 'standartInterstTagMarging'),
       padding: StandartContainerExtractor.extract<EdgeInsetsGeometry>(constantContainer, 'standartInterstTagPadding'),
       decoration: StandartContainerExtractor.extract<BoxDecoration>(constantContainer, 'standartInterestTagDecoration'),
       child: Text(

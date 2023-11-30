@@ -21,9 +21,10 @@ class _MainAppBarState extends State<MainAppBar> {
       pinned: true,
       snap: true,
       stretch: _stretch,
+      automaticallyImplyLeading: false,
       onStretchTrigger: () async {},
       backgroundColor: StandartContainerExtractor.extract(constantContainer, 'mainAppBarBackgroundColor'),
-      surfaceTintColor: Colors.white,
+      surfaceTintColor: StandartContainerExtractor.extract(constantContainer, 'mainAppBarSurfaceTintColor'),
       stretchTriggerOffset: 200.0,
       expandedHeight: StandartContainerExtractor.extract(constantContainer, 'mainAppBarHeight'),
       flexibleSpace: const FlexibleSpaceBar(

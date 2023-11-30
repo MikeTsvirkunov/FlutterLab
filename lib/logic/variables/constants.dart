@@ -48,20 +48,27 @@ var constantContainer = ConstantContainer(
     'tabBarUnselectedLabelColor': const Color(0xff575757),
     'tabBarSelectedLabelColor': Colors.black,
     'mainAppBarBackgroundColor': Colors.white,
+    'mainAppBarSurfaceTintColor': Colors.white,
     // paddings
     'exitButtonPaddings': const EdgeInsetsDirectional.all(14),
     'profilePadding': const EdgeInsetsDirectional.all(14),
     'availableActivityPadding': const EdgeInsetsDirectional.all(15),
     'availaibleActivityBlockPadding': const EdgeInsetsDirectional.all(16),
-    'mainPadding': const EdgeInsetsDirectional.all(0),
-    'standartInterstTagPadding': const EdgeInsetsDirectional.all(5),
+    'mainPadding': const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 25),
+    'standartInterstTagPadding': const EdgeInsetsDirectional.symmetric(horizontal: 10, vertical: 5),
+    'standartProfilePageBlockTitlePadding': const EdgeInsetsDirectional.fromSTEB(15, 40, 40, 5),
+    'standartProfilePageBlockDescriptionPadding': const EdgeInsetsDirectional.symmetric(horizontal: 15),
     // margin
+    'standartInterstTagMarging': const EdgeInsetsDirectional.fromSTEB(15, 15, 0, 0),
     'availaibleActivityBlockMargin': const EdgeInsetsDirectional.symmetric(horizontal: 0),
     // sizes
     'mainAppBarHeight': 250.0,
     'availaibleActivityBlockWidth': 216.0,
     'availaibleActivityBlockHeight': 150.0,
     'availableActivitySpacer': 15.0,
+    'endSpace': 20.0,
+    'titleTarifsMarkWidth': 25.0,
+    'titleTarifsIndentWidth': 55.0,
     // strings
     'getUserName': GetUserName(),
     // box decorations
@@ -70,15 +77,23 @@ var constantContainer = ConstantContainer(
       borderRadius: BorderRadius.all(Radius.circular(10)),
       boxShadow: [
         BoxShadow(
-          color: Colors.black
+          offset: Offset(0, 5),
+          blurRadius: 5,
+          spreadRadius: -2.5,
+          color: Colors.black26
         )
       ]
     ),
     'standartInterestTagDecoration': const BoxDecoration(
       color: Color(0xffe6e6e6),
-      borderRadius: BorderRadius.all(Radius.circular(10)),
+      borderRadius: BorderRadius.all(Radius.circular(100)),
     ),
     // text styles
+    'profileAvatarTextStyle': const TextStyle(
+      color: Colors.black,
+      fontWeight: FontWeight.bold,
+      fontSize: 20
+    ),
     'availaibleActivityBlockPriceStyle': const TextStyle(
       color: Color(0x61000000),
       fontSize: 14

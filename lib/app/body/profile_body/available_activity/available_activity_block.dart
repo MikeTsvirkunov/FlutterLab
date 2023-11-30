@@ -30,6 +30,7 @@ class _AvailableActivityBlockState extends State<AvailableActivityBlock> {
           Row(
             children: [
               SvgPicture.asset(widget.imagePass),
+              const SizedBox(width: 10),
               Text(
                 widget.name,
                 style: StandartContainerExtractor.extract<TextStyle>(constantContainer, 'availaibleActivityBlockNameStyle')
@@ -37,6 +38,7 @@ class _AvailableActivityBlockState extends State<AvailableActivityBlock> {
             ]
           ),
           Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 widget.extraText,

@@ -35,7 +35,7 @@ class _ProfileAvatarState extends State<ProfileAvatar> {
                   snapshot.data!.buffer.asUint8List(),
                 ),
                 Text(
-                  style: TextStyle(color: StandartContainerExtractor.extract(constantContainer, 'mainTextColor')),
+                  style: StandartContainerExtractor.extract(constantContainer, 'profileAvatarTextStyle'),
                   StandartContainerExtractor.extract<IStrategy>(constantContainer, 'getUserName').execute<String>()
                 )
               ],
