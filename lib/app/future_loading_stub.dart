@@ -10,10 +10,13 @@ class FutureLoadingStub extends StatefulWidget {
 class _FutureLoadingStubState extends State<FutureLoadingStub> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.amber,
-      height: 100,
-      width: 100,
+    return const CircularProgressIndicator(
+
     );
+    // return Container(
+    //   color: Colors.amber,
+    //   height: 100,
+    //   width: 100,
+    // );
   }
 }

@@ -12,13 +12,20 @@ class StdInterestTag extends StatefulWidget {
 class _StdInterestTagState extends State<StdInterestTag> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: StandartContainerExtractor.extract<EdgeInsetsGeometry>(constantContainer, 'standartInterstTagMarging'),
-      padding: StandartContainerExtractor.extract<EdgeInsetsGeometry>(constantContainer, 'standartInterstTagPadding'),
-      decoration: StandartContainerExtractor.extract<BoxDecoration>(constantContainer, 'standartInterestTagDecoration'),
-      child: Text(
-        widget.text,
-        style: StandartContainerExtractor.extract<TextStyle>(constantContainer, 'standartInterestTagTextStyle'),
+    return Padding(
+      padding: StandartContainerExtractor.extract<EdgeInsetsGeometry>(constantContainer, 'standartInterstTagMarging'),
+      child: InkWell(
+        borderRadius: StandartContainerExtractor.extract<BoxDecoration>(constantContainer, 'standartInterestTagDecoration').borderRadius as BorderRadius,
+        onTap: () {},
+        radius: 20,
+        child: Ink(
+          padding: StandartContainerExtractor.extract<EdgeInsetsGeometry>(constantContainer, 'standartInterstTagPadding'),
+          decoration: StandartContainerExtractor.extract<BoxDecoration>(constantContainer, 'standartInterestTagDecoration'),
+          child: Text(
+            widget.text,
+            style: StandartContainerExtractor.extract<TextStyle>(constantContainer, 'standartInterestTagTextStyle'),
+          )
+        )
       )
     );
   }

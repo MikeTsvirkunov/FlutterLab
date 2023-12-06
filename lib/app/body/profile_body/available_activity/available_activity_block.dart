@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter_test_project/logic/container/standart_container_extractor.dart';
 import 'package:flutter_test_project/logic/variables/constants.dart';
+import 'package:flutter_test_project/logic/variables/sizes.dart';
 
 class AvailableActivityBlock extends StatefulWidget {
   final String imagePass;
@@ -17,41 +18,48 @@ class AvailableActivityBlock extends StatefulWidget {
 class _AvailableActivityBlockState extends State<AvailableActivityBlock> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: StandartContainerExtractor.extract<double>(constantContainer, 'availaibleActivityBlockWidth'),
-      height: StandartContainerExtractor.extract<double>(constantContainer, 'availaibleActivityBlockHeight'),
-      padding: StandartContainerExtractor.extract<EdgeInsetsGeometry>(constantContainer, 'availaibleActivityBlockPadding'),
-      margin: StandartContainerExtractor.extract<EdgeInsetsGeometry>(constantContainer, 'availaibleActivityBlockMargin'),
-      decoration: StandartContainerExtractor.extract<BoxDecoration>(constantContainer, 'availaibleActivityBlockDecoration'),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Row(
-            children: [
-              SvgPicture.asset(widget.imagePass),
-              const SizedBox(width: 10),
-              Text(
-                widget.name,
-                style: StandartContainerExtractor.extract<TextStyle>(constantContainer, 'availaibleActivityBlockNameStyle')
-              )
-            ]
-          ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                widget.extraText,
-                style: StandartContainerExtractor.extract<TextStyle>(constantContainer, 'availaibleActivityBlockextraTextStyle'),
-              ),
-              Text(
-                widget.price,
-                style: StandartContainerExtractor.extract<TextStyle>(constantContainer, 'availaibleActivityBlockPriceStyle'),
-              )
-            ],
-          )
-        ],
+    return ConstrainedBox(
+      constraints: BoxConstraints(
+        minWidth: StandartContainerExtractor.extract<double>(sizesContainer, 'availaibleActivityBlockWidth')
       ),
-    );
+        child: InkWell(
+          borderRadius: StandartContainerExtractor.extract<BoxDecoration>(constantContainer, 'availaibleActivityBlockDecoration').borderRadius as BorderRadius,
+          onTap: (){},
+          child: Ink(
+        height: StandartContainerExtractor.extract<double>(sizesContainer, 'availaibleActivityBlockHeight'),
+        padding: StandartContainerExtractor.extract<EdgeInsetsGeometry>(constantContainer, 'availaibleActivityBlockPadding'),
+        // margin: StandartContainerExtractor.extract<EdgeInsetsGeometry>(constantContainer, 'availaibleActivityBlockMargin'),
+        decoration: StandartContainerExtractor.extract<BoxDecoration>(constantContainer, 'availaibleActivityBlockDecoration'),
+        child: Column(
+          
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Row(
+              children: [
+                SvgPicture.asset(widget.imagePass),
+                const SizedBox(width: 10),
+                Text(
+                  widget.name,
+                  style: StandartContainerExtractor.extract<TextStyle>(constantContainer, 'availaibleActivityBlockNameStyle')
+                )
+              ]
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  widget.extraText,
+                  style: StandartContainerExtractor.extract<TextStyle>(constantContainer, 'availaibleActivityBlockextraTextStyle'),
+                ),
+                Text(
+                  widget.price,
+                  style: StandartContainerExtractor.extract<TextStyle>(constantContainer, 'availaibleActivityBlockPriceStyle'),
+                )
+              ],
+            )
+          ],
+        ),
+    )));
   }
 }
