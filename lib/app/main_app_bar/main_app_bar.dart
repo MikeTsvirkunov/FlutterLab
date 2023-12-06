@@ -23,7 +23,7 @@ class _MainAppBarState extends State<MainAppBar> {
       stretch: _stretch,
       automaticallyImplyLeading: false,
       onStretchTrigger: () async {},
-      backgroundColor: StandartContainerExtractor.extract(constantContainer, 'mainAppBarBackgroundColor'),
+      // backgroundColor: StandartContainerExtractor.extract(constantContainer, 'mainAppBarBackgroundColor'),
       surfaceTintColor: StandartContainerExtractor.extract(constantContainer, 'mainAppBarSurfaceTintColor'),
       stretchTriggerOffset: 200.0,
       expandedHeight: StandartContainerExtractor.extract(constantContainer, 'mainAppBarHeight'),
