@@ -3,6 +3,7 @@ import 'package:flutter_test_project/app/main_app_bar/exit_button.dart';
 import 'package:flutter_test_project/app/main_app_bar/profile_avatar.dart';
 import 'package:flutter_test_project/logic/container/standart_container_extractor.dart';
 import 'package:flutter_test_project/logic/variables/constants.dart';
+import 'package:flutter_test_project/logic/variables/text_style_container.dart';
 import 'package:flutter_test_project/logic/variables/variables.dart';
 
 class MainAppBar extends StatefulWidget {
@@ -56,7 +57,8 @@ class _MainAppBarState extends State<MainAppBar> {
         indicatorColor: StandartContainerExtractor.extract(constantContainer, 'mainColor'),
         unselectedLabelColor: StandartContainerExtractor.extract(constantContainer, 'tabBarUnselectedLabelColor'),
         labelColor: StandartContainerExtractor.extract(constantContainer, 'tabBarSelectedLabelColor'),
-        
+        unselectedLabelStyle: StandartContainerExtractor.extract(textStyleContainer, 'unselectedMainTabTextStyle'),
+        labelStyle: StandartContainerExtractor.extract(textStyleContainer, 'selectedMainTabTextStyle'),
         indicatorSize: TabBarIndicatorSize.tab,
         tabs: const [
           Tab(text: 'Профиль'), 

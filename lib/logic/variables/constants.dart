@@ -113,12 +113,12 @@ var constantContainer = ConstantContainer(
     ),
     'availaibleActivityBlockextraTextStyle': const TextStyle(
       color: Colors.black,
-      fontWeight: FontWeight.bold,
+      fontWeight: FontWeight.w700,
       fontSize: 14,
       fontFamily: 'SFProText'
     ),
     'availaibleActivityBlockNameStyle': const TextStyle(
-      fontWeight: FontWeight.bold,
+      fontWeight: FontWeight.w700,
       color: Colors.black,
       fontSize: 16,
       fontFamily: 'SFProText'
@@ -130,7 +130,7 @@ var constantContainer = ConstantContainer(
     ),
     'standartProfilePageBlockTitleStyle':const TextStyle(
       color: Colors.black, 
-      fontWeight: FontWeight.bold,
+      fontWeight: FontWeight.w700,
       fontSize: 20,
       fontFamily: 'SFProText'
     ),

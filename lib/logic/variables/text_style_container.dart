@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test_project/logic/container/constant_container.dart';
 
-var constantContainer = ConstantContainer(
+var textStyleContainer = ConstantContainer(
   {
     
     'tarifBlockHeaderTextStyle': const TextStyle(
@@ -37,12 +37,14 @@ var constantContainer = ConstantContainer(
     ),
     'standartProfilePageBlockTitleStyle':const TextStyle(
       color: Colors.black, 
-      fontWeight: FontWeight.bold,
+      fontWeight: FontWeight.w700,
       fontSize: 20
     ),
     'standartInterestTagTextStyle': const TextStyle(
       color: Colors.black, 
       fontSize: 14
     ),
+    'unselectedMainTabTextStyle': const TextStyle(fontWeight: FontWeight.w600),
+    'selectedMainTabTextStyle': const TextStyle(fontWeight: FontWeight.w600),
   }
 );

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test_project/app/body/profile_body/tarifs/group_block.dart';
 import 'package:flutter_test_project/logic/container/standart_container_extractor.dart';
 import 'package:flutter_test_project/logic/variables/constants.dart';
-import 'package:flutter_test_project/logic/variables/variables.dart';
 
 class Tarifs extends StatefulWidget {
   const Tarifs({Key? key}) : super(key: key);

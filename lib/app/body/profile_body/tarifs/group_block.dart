@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter_test_project/logic/container/standart_container_extractor.dart';
-import 'package:flutter_test_project/logic/interfaces/istrategy.dart';
 import 'package:flutter_test_project/logic/variables/constants.dart';
 
 class GroupBlock extends StatefulWidget {

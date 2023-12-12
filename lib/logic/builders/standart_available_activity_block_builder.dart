@@ -25,7 +25,7 @@ class StandartAvailableActivityBlockBuilder implements IStrategy {
         : stdAvailableActivityImagePass, 
       name: processedData['name'], 
       extraText: processedData['extra_text'], 
-      price: processedData['price'].toString() + ' ' + processedData['measure']
+      price: '${processedData["price"]} ${processedData['measure']}'
     ) as T;
   }
 }
