@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:flutter_test_project/logic/container/constant_container.dart';
 
 var sizesContainer = ConstantContainer({
@@ -8,4 +9,7 @@ var sizesContainer = ConstantContainer({
   'endSpace': 20.0,
   'titleTarifsMarkWidth': 25.0,
   'titleTarifsIndentWidth': 55.0,
+  'wrapInterestTagsSpacing': 10.0,
+  //paddings
+  'wrapInterestTagsPadding': const EdgeInsets.all(15),
 });

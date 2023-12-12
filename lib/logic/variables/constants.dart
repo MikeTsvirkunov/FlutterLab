@@ -49,6 +49,8 @@ var constantContainer = ConstantContainer(
     'tabBarSelectedLabelColor': Colors.black,
     'mainAppBarBackgroundColor': Colors.white,
     'mainAppBarSurfaceTintColor': Colors.white,
+    'stdInterestTagBackGroundColor': const Color(0xffe6e6e6),
+    'stdInterestTagSelectedColor': const Color(0xffafafaf),
     // paddings
     'exitButtonPaddings': const EdgeInsetsDirectional.all(14),
     'profilePadding': const EdgeInsetsDirectional.all(14),
@@ -91,43 +93,52 @@ var constantContainer = ConstantContainer(
     // text styles
     'tarifBlockHeaderTextStyle': const TextStyle(
       color: Colors.black,
-      fontSize: 16
+      fontSize: 16,
+      fontFamily: 'SFProText'
     ),
     'tarifBlockSubheaderTextStyle': const TextStyle(
       color: Color(0xff717171),
-      fontSize: 14
+      fontSize: 14, 
+      fontFamily: 'SFProText'
     ),
     'profileAvatarTextStyle': const TextStyle(
       color: Colors.black,
-      fontWeight: FontWeight.bold,
-      fontSize: 20
+      fontWeight: FontWeight.w700,
+      fontSize: 20,
+      fontFamily: 'SFProText'
     ),
     'availaibleActivityBlockPriceStyle': const TextStyle(
       color: Color(0x61000000),
-      fontSize: 14
+      fontSize: 14, fontFamily: 'SFProText'
     ),
     'availaibleActivityBlockextraTextStyle': const TextStyle(
       color: Colors.black,
       fontWeight: FontWeight.bold,
-      fontSize: 14
+      fontSize: 14,
+      fontFamily: 'SFProText'
     ),
     'availaibleActivityBlockNameStyle': const TextStyle(
       fontWeight: FontWeight.bold,
       color: Colors.black,
-      fontSize: 16
+      fontSize: 16,
+      fontFamily: 'SFProText'
     ),
     'standartProfilePageBlockDescriptionStyle': const TextStyle(
       color: Color(0x61000000), 
-      fontSize: 16
+      fontSize: 16, 
+      fontFamily: 'SFProText'
     ),
     'standartProfilePageBlockTitleStyle':const TextStyle(
       color: Colors.black, 
       fontWeight: FontWeight.bold,
-      fontSize: 20
+      fontSize: 20,
+      fontFamily: 'SFProText'
     ),
     'standartInterestTagTextStyle': const TextStyle(
       color: Colors.black, 
-      fontSize: 14
+      fontSize: 14, 
+      fontFamily: 'SFProText',
+      fontWeight: FontWeight.w200
     ),
     // tarifs and limits
     'tarifsAndLimitsValues': [

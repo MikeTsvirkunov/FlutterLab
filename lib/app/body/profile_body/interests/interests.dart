@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_test_project/app/body/profile_body/interests/interests_wrap.dart';
 import 'package:flutter_test_project/app/future_loading_stub.dart';
 import 'package:flutter_test_project/logic/container/standart_container_extractor.dart';
 import 'package:flutter_test_project/logic/interfaces/istrategy.dart';
@@ -24,9 +25,7 @@ class _InterestsState extends State<Interests> {
       future: data, 
       builder: ((context, snapshot) {
         if (snapshot.hasData){
-          return Wrap(
-            children: StandartContainerExtractor.extract<IStrategy>(constantContainer, 'interestsListGenerator').execute<List<Widget>>(params: [snapshot.data]),
-          );
+          return const InterestsWrap();
         } else {
           return const FutureLoadingStub();
         } 

@@ -18,6 +18,14 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  fonts:
+  - family: SFProText
+    fonts:
+      - asset: fonts\sfpt\SFProText-Regular.ttf
+      - asset: fonts\sfpt\SFProText-Semibold.ttf
+        weight: 100
+      - asset: fonts\sfpt\SFProText-Heavy.ttf
+        weight: 700
   assets:
     - assets/
 
